@@ -1,0 +1,20 @@
+<app-boton
+  (onClick)="suma()"
+  [color]="'blue'"
+  [texto]="'Suma'"
+  (edad)="getEdad($event)"
+></app-boton>
+<app-boton (onClick)="resta()" [color]="'red'" [texto]="'Resta'"></app-boton>
+{{ edad }}
+<br />
+@if (edad >= 18) {
+<p>Mayor de edad</p>
+} @else {
+<p>Menor de edad</p>
+}
+<ul>
+  @for (letra of title; track letra) {
+  <li>{{ letra }}</li>
+  }
+</ul>
+<input type="text" [(ngModel)]="title" />
